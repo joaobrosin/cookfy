@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="public/assets/PNG-files/logo_cookfy@3x.png" alt="Cookfy Logo">
+    <h1> Cookfy <h1/>
 </div>
 
 # Table of Contents

@@ -2,9 +2,11 @@ const express = require('express')
 const server = express()
 const nunjucks = require('nunjucks')
 
+const request = require('request');
+
 server.use(express.static('public'))
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
 nunjucks.configure("views", {
     express: server,
@@ -13,7 +15,13 @@ nunjucks.configure("views", {
 })
 
 server.get('/', function (req, res) {
-    return res.render('index')
+    request({
+        url: 'https://randomuser.me/api/'
+    }, function (error, response, body) {
+        const result = JSON.parse(body).results[0]
+        console.log(result.gender)
+        return res.render('index', { result })
+    });
 })
 
 server.listen(5000, function () {
