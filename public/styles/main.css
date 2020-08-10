@@ -80,6 +80,17 @@ header .input-background img {
     padding: 10px;
 }
 
+header .input-background img:hover {
+    border-radius: 50% 50% 5px 50%;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+header .search-button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 .profile-box {
     margin: 27px 84px 27px 10px ;
     display: flex;
@@ -157,9 +168,103 @@ img.cookfy-logo {
     font-weight: normal;
 }
 
-.social-media-box img {
+.social-media-box a {
     margin-left: 15px;
 }
+
+.icon {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background-repeat: no-repeat;
+}
+
+.facebook-icon {
+    background-image: url("../assets/Fb.svg");
+}
+
+.facebook-icon:hover {
+    background-image: url("../assets/Fb_active.svg");
+}
+
+.instagram-icon {
+    background-image: url("../assets/IG.svg");
+}
+
+.instagram-icon:hover {
+    background-image: url("../assets/IG_active.svg");
+}
+
+.twitter-icon {
+    background-image: url("../assets/Twitter.svg");
+}
+
+.twitter-icon:hover {
+    background-image: url("../assets/Twitter_active.svg");
+}
+
+.linkedin-icon {
+    background-image: url("../assets/Linkedin.svg");
+}
+
+.linkedin-icon:hover {
+    background-image: url("../assets/Linkedin_active.svg");
+}
+
+.pinterest-icon {
+    background-image: url("../assets/Pinterest.svg");
+}
+
+.pinterest-icon:hover {
+    background-image: url("../assets/Pinterest_active.svg");
+}
+
+/* Profile MODAL */
+
+.profile-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms;
+}
+
+.profile-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.profile-modal-box {
+    position: absolute;
+    background-color: white;
+    width: 166px;
+    height: 100%;
+    right: 0px;
+    padding: 45px 60px;
+}
+
+.close-button {
+    width: fit-content;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+}
+
+.close-button img {
+    width: 22px;
+    margin-right: 15px;
+}
+
 
 /* Responsivity settings */
 
@@ -209,7 +314,7 @@ img.cookfy-logo {
 
     /* footer */
     
-    .social-media-box img {
+    .social-media-box a {
         width: 20px;
         margin-left: 7px;
         margin-right: 7px;
@@ -218,10 +323,6 @@ img.cookfy-logo {
     .copy-box img{
         width: 67px;
     }
-
-    
-
-
 }
 
 @media (max-width: 660px) {
