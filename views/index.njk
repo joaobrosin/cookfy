@@ -20,7 +20,7 @@
 
     <body>
         <header>
-            <img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="Cookfy Logo">
+            <a href="/"><img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="Cookfy Logo"></a>
             <div class="input-wrapper">
                 <div class="input-background">
                     <input type="text" placeholder="Pesquise alguma receita">
@@ -82,40 +82,86 @@
                 </div>
 
                 <div class="social-media-box">
-                    <a href="https://facebook.com">
+                    <a href="https://facebook.com" target="_blank">
                         <span class="icon facebook-icon"></span></a>
 
-                    <a href="https://instagram.com">
+                    <a href="https://instagram.com" target="_blank">
                         <span class="icon instagram-icon"></span></a>
 
-                    <a href="https://twitter.com">
+                    <a href="https://twitter.com" target="_blank">
                         <span class="icon twitter-icon"></span></a>
 
-                    <a href="https://linkedin.com">
+                    <a href="https://linkedin.com" target="_blank">
                         <span class="icon linkedin-icon"></span></a>
 
-                    <a href="https://pinterest.com">
+                    <a href="https://pinterest.com" target="_blank">
                         <span class="icon pinterest-icon"></span></a>
                 </div>
             </div>
         </footer>
 
-        <div class="profile-modal">
+        <div class="profile-modal active">
             <div class="profile-modal-box">
                 <div class="close-button">
                     <img src="../assets/fechar.svg " alt="Botão Fechar">
                     <p>Fechar</p>
                 </div>
-                <p>avatar e nome</p>
-                <p>email</p>
-                <p>telefone</p>
 
-                <h1>plano mensal</h1>
-                <h2>assinar plano anual</h2>
+                <div class="avatar-name-box">
+                    <div class="avatar-background">
+                        <img src="../assets/Avatar_feminino.svg" alt="">
+                    </div>
 
-                <p>reportar bug</p>
-                <p>alterar senha</p>
-                <p>sair</p>
+                    <h3 class="full-name">
+                        {{ result.name.first }}
+                        {{ result.name.last }}
+                    </h3>
+                </div>
+
+                <div class="email-box">
+                    <img src="../assets/email.svg" alt="">
+                    <p>{{ result.email }}</p>
+                </div>
+
+                <div class="phone-box">
+                    <img src="../assets/telefone.svg" alt="">
+                    <p>{{ result.phone }}</p>
+                </div>
+
+                <div class="plan-box">
+                    <h2>Plano mensal</h2>
+                    <p>16 dias restantes</p>
+                </div>
+
+                <div class="time-bar-box">
+                    <div class="time-bar-background">
+                        <div class="time-bar"></div>
+                    </div>
+                </div>
+
+                <a href="/">
+                    <div class="call-to-action">
+                        <h3>Assinar plano anual</h3>
+                    </div>
+                </a>
+
+                <div class="profile-options">
+                    <img src="../assets/bug.svg" alt="">
+                    <a href="/">Reportar bug</a>
+
+                </div>
+
+                <div class="profile-options">
+                    <img src="../assets/senha.svg" alt="">
+                    <a href="/">Alterar senha</a>
+
+                </div>
+
+                <div class="profile-options">
+                    <img src="../assets/sair.svg" alt="">
+                    <a href="/">Sair</a>
+                </div>
+
             </div>
         </div>
 

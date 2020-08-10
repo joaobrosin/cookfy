@@ -19,7 +19,6 @@ server.get('/', function (req, res) {
         url: 'https://randomuser.me/api/'
     }, function (error, response, body) {
         const result = JSON.parse(body).results[0]
-        console.log(result.gender)
         return res.render('index', { result })
     });
 })

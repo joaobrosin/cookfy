@@ -15,6 +15,10 @@
 
 /* Default settings */
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 42px;
     font-weight: bold;
@@ -241,10 +245,10 @@ img.cookfy-logo {
 .profile-modal-box {
     position: absolute;
     background-color: white;
-    width: 166px;
-    height: 100%;
-    right: 0px;
-    padding: 45px 60px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 25px 40px;
 }
 
 .close-button {
@@ -253,6 +257,7 @@ img.cookfy-logo {
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 25px;
 }
 
 .close-button:hover {
@@ -264,6 +269,116 @@ img.cookfy-logo {
     width: 22px;
     margin-right: 15px;
 }
+
+.avatar-name-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    color: var(--color-secondary);
+}
+
+.avatar-name-box .avatar-background {
+    width: 69px;
+    height: 69px;
+}
+
+.avatar-name-box .avatar-background img{
+    width: 38px;
+}
+
+.full-name {
+    margin-left: 12px;
+}
+
+.email-box {
+    display: flex;
+    padding-left: 8px;
+
+}
+
+.email-box img {
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.phone-box {
+    display: flex;
+    margin-bottom: 30px;
+    padding-left: 8px;
+
+}
+
+.phone-box img {
+    margin-right: 10px;
+}
+
+.plan-box {
+    display: flex;
+    align-items: center;
+}
+
+.plan-box h2 {
+    margin-right: 36px;
+    margin-bottom: 10px;
+}
+
+.time-bar-background {
+    width: 278px;
+    height: 9px;
+    background-color: #e8e8e8;
+    border-radius: 16px;
+    margin-bottom: 44px;
+}
+
+.time-bar {
+    width: 60%;
+    height: 9px;
+    border-radius: 16px;
+    background-color: var(--color-secondary);
+}
+
+.call-to-action {
+    background-color: var(--color-secondary);
+    display: inline-block;
+    width: 278px;
+    height: 44px;
+    border-radius: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+    cursor: pointer;
+}
+
+.call-to-action:hover {
+    background-color: #9c172f;
+}
+
+.call-to-action h3 {
+    color: white;
+    font-weight: normal;
+}
+
+.profile-options {
+    display: flex;
+    color: #c1bebe;
+    margin-bottom: 11px;
+}
+
+.profile-options img {
+    margin-right: 10px;
+}
+
+.profile-options a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #c1bebe;
+}
+
+.profile-options a:hover {
+    color: #838383;
+}
+
 
 
 /* Responsivity settings */
@@ -374,4 +489,27 @@ img.cookfy-logo {
         align-self: flex-end;
     }
 
+}
+
+@media (max-width: 360px) {
+
+    /* Modal */
+
+    .plan-box h2 {
+        font-size: 16px;
+    }
+
+    .plan-box p {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .time-bar-background {
+        width: 225px;
+    }
+
+    .call-to-action {
+        width: 225px;
+
+    }
 }
