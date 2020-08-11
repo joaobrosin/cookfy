@@ -15,6 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cookfy - Experimente suas receitas preferidas.</title>
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/index.css">
 
     </head>
 
@@ -22,56 +23,112 @@
         <header>
             <a href="/"><img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="Cookfy Logo"></a>
             <div class="input-wrapper">
-                <div class="input-background">
+                <form class="input-background" action="">
                     <input type="text" placeholder="Pesquise alguma receita">
                     <button class="search-button" type="submit"><img src="/assets/Lupa.svg" alt="Search Button"></button>
-                </div>
+                </form>
             </div>
+
             <div class="profile-box">
                 <p class="profile-name">{{result.name.first}}</p>
                 <div class="avatar-background">
-                    <img src="/assets/Avatar_feminino.svg" alt="Profile Avatar">
+                    {%if result.gender == 'female'%}
+                        <img src="../assets/Avatar_feminino.svg" alt="">
+                    {%else%}
+                        <img src="../assets/Avatar_masculino.svg" alt="">
+                    {%endif%}
                 </div>
             </div>
         </header>
 
-        <section class="introduction"></section>
-
-        <section class="content">
-            <div>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-                <p>content test</p>
-            </div>
+        <section class="introduction">
+            <div></div>
+            <h1>Bem vindo</h1>
         </section>
+                
+        <div class="content">
+
+            <div class="left-background">
+
+            </div>
+            
+            <section>
+                <div class="title1">
+                    <h1>Experimente alguma das últimas receitas</h1>
+                </div>
+
+                <div class="recipe1">
+
+                    <img src="../images/sandwich.jpg" alt="">
+
+                    <div class="text-box1">
+                        <p class="pink-color">Adicionado Ontem</p>
+                        <h2>Sanduíche de tomate com salada de ovos</h2>
+                        <div class="difficult">
+                            <p class="pink-color">Fácil</p>
+                            <div class="stars">
+                                <img src="../assets/estrela.svg" alt="">
+                                <img src="../assets/estrela.svg" alt="">
+                                <img src="../assets/estrela.svg" alt="">
+                                <img src="../assets/estrela.svg" alt="">
+                                <img src="../assets/estrela.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left-button">
+                                <img src="../assets/seta_esquerda.svg" alt="">
+                            </div>
+
+                            <div class="right-button">
+                                <img src="../assets/seta_direita.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="middle-background">
+                    <img src="../assets/elemento_5.svg" draggable="false" alt="">
+                </div>
+
+                <div class="title2">
+                    <h1>Entre no mundo gastronômico</h1>
+                </div>
+
+                <div class="recipe2">
+                    <div class="kitchen-option-box">
+                        <div class="kitchen-option">
+                            <div class="icon-box">
+                               <img src="../assets/cozinha.svg" alt=""> 
+                            </div>
+                            <h2>Cozinha</h2>
+                        </div>
+
+                        <div class="kitchen-option">
+                            <div class="icon-box">
+                              <img src="../assets/patisserie.svg" alt="">  
+                            </div>
+                            <h2>Patisserie</h2>
+                        </div>
+
+                        <div class="kitchen-option">
+                            <div class="icon-box">
+                                <img src="../assets/drinks.svg" alt="">
+                            </div> 
+                            <h2>Drinks</h2>
+                        </div>
+                    </div>
+
+                    <img class="picture" src="../images/patisserie.jpg" alt="">
+
+                </div>
+
+
+            </section>
+
+            <div class="right-background">
+
+            </div>
+        </div>
 
         <footer>
             <div class="footer-box">
@@ -100,7 +157,7 @@
             </div>
         </footer>
 
-        <div class="profile-modal active">
+        <div class="profile-modal">
             <div class="profile-modal-box">
                 <div class="close-button">
                     <img src="../assets/fechar.svg " alt="Botão Fechar">
@@ -109,7 +166,11 @@
 
                 <div class="avatar-name-box">
                     <div class="avatar-background">
+                        {%if result.gender == 'female'%}
                         <img src="../assets/Avatar_feminino.svg" alt="">
+                        {%else%}
+                        <img src="../assets/Avatar_masculino.svg" alt="">
+                        {%endif%}
                     </div>
 
                     <h3 class="full-name">
@@ -130,12 +191,19 @@
 
                 <div class="plan-box">
                     <h2>Plano mensal</h2>
-                    <p>16 dias restantes</p>
+                    <p class="end-day">
+                        {# JS random day #}
+                    </p>
+                    <p>
+                        dias restantes
+                    </p>
                 </div>
 
                 <div class="time-bar-box">
                     <div class="time-bar-background">
-                        <div class="time-bar"></div>
+                        <div class="time-bar">
+                            {# JS random percentage bar #}
+                        </div>
                     </div>
                 </div>
 
@@ -148,13 +216,11 @@
                 <div class="profile-options">
                     <img src="../assets/bug.svg" alt="">
                     <a href="/">Reportar bug</a>
-
                 </div>
 
                 <div class="profile-options">
                     <img src="../assets/senha.svg" alt="">
                     <a href="/">Alterar senha</a>
-
                 </div>
 
                 <div class="profile-options">
@@ -165,7 +231,7 @@
             </div>
         </div>
 
-        <script src="scripts/script.js"></script>
+        <script src="scripts/profile-modal.js"></script>
     </body>
 
 </html>
