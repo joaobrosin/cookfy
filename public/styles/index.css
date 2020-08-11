@@ -60,20 +60,19 @@
 .text-box1 h2 {
     margin-top: 12px;
     max-width: 240px;
-
 }
 
 .difficult {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
     margin-top: 12px;
     display: flex;
 }
 
-.difficult p {
-    margin-right: 8px;
-}
-
 .stars img {
     width: 12px;
+    margin: 2px;
 }
 
 .slide {
@@ -82,9 +81,9 @@
 }
 
 .left-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 16.5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 26.5px;
     box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: var(--white);
     display: flex;
@@ -92,22 +91,50 @@
     align-items: center;
     margin-right: 11px;
     cursor: pointer;
+    transition: 400ms;
 }
 
-.left-button img {
-    width: 8px;
+.left-button:hover {
+    background-color: var(--color-secondary);
+}
+
+.left-button:hover > .left-arrow-box {
+    background-image: url("../assets/Seta_esquerda_active.svg");
+}
+
+.left-arrow-box {
+    width: 18px;
+    height: 18px;
+    background-image: url("../assets/Seta_esquerda.svg");
+    background-repeat: no-repeat;
 }
 
 .right-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 16.5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 26.5px;
     box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: 400ms;
+}
+
+.right-button:hover {
+    background-color: var(--color-secondary);
+}
+
+.right-button:hover > .right-arrow-box {
+    background-image: url("../assets/Seta_direita_active.svg");
+}
+
+.right-arrow-box {
+    width: 18px;
+    height: 18px;
+    background-image: url("../assets/Seta_direita.svg");
+    background-repeat: no-repeat;
 }
 
 .right-button img {
@@ -155,24 +182,48 @@
     cursor: pointer;
 }
 
-.kitchen-option:hover {
+.first-option.selected > .icon-box.kitchen  {
+    background-image: url("../assets/Cozinha_active.svg");
+}
+
+.first-option.selected {
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
+}
+
+.second-option.selected > .icon-box.patisserie  {
+    background-image: url("../assets/patisserie_active.svg");
+}
+
+.second-option.selected {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
+}
+
+.third-option.selected > .icon-box.drinks  {
+    background-image: url("../assets/drinks_active.svg");
+}
+
+.third-option.selected {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
+}
+
+.kitchen-option:hover {
+    border: 1px solid var(--color-secondary);
+    transition: 400ms;
 }
 
 .kitchen-option h2 {
     font-size: 20px;
+    color: #969090;
+    transition: 400ms;
 }
 
-.kitchen-option:hover >  h2 {
+.kitchen-option:hover > h2 {
     color: var(--color-secondary);
+
 }
 
-.kitchen-option img {
-    width: 40px;
-}
-
-.kitchen-option:nth-child(2) img {
-    width: 30px;
+.kitchen-option.selected > h2 {
+    color: var(--color-secondary);
 }
 
 .icon-box {
@@ -184,12 +235,48 @@
     margin: auto 15px auto 35px;
 }
 
-.kitchen-option h2 {
-    color: #969090;
+.icon-box.kitchen {
+    background-image: url("../assets/cozinha.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 400ms;
+
+}
+
+.icon-box.patisserie {
+    background-image: url("../assets/Patisserie.svg");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 400ms;
+
+}
+
+.icon-box.drinks {
+    background-image: url("../assets/Drinks.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 400ms;
+
+}
+
+.first-option:hover > .icon-box.kitchen {
+    background-image: url("../assets/Cozinha_active.svg");
+}
+
+.second-option:hover > .icon-box.patisserie {
+    background-image: url("../assets/Patisserie_active.svg");
+}
+
+.third-option:hover > .icon-box.drinks {
+    background-image: url("../assets/drinks_active.svg");
 }
 
 .recipe2 .picture {
     width: 319px;
+    height: 210px;
 }
 
 /* content backgrounds */
@@ -295,6 +382,7 @@
 @media (max-width: 380px) {
     .recipe1 .picture, .recipe2 .picture {
         width: 250px;
+        height: 130px;
     }
 
     .title1 h1, .title2 h1 {
@@ -307,4 +395,5 @@
     .footer-bg1, .footer-bg2 {
         display: none;
     }
+
 }
