@@ -33,9 +33,9 @@
                 <p class="profile-name">{{result.name.first}}</p>
                 <div class="avatar-background">
                     {%if result.gender == 'female'%}
-                        <img src="../assets/Avatar_feminino.svg" alt="">
+                        <img src="../assets/Avatar_feminino.svg" alt="Avatar">
                     {%else%}
-                        <img src="../assets/Avatar_masculino.svg" alt="">
+                        <img src="../assets/Avatar_masculino.svg" alt="Avatar">
                     {%endif%}
                 </div>
             </div>
@@ -49,7 +49,9 @@
         <div class="content">
 
             <div class="left-background">
-
+                <div class="pink-balls">
+                    <img src="../assets/elemento_4.svg" draggable="false" alt="">
+                </div>
             </div>
             
             <section>
@@ -59,7 +61,7 @@
 
                 <div class="recipe1">
 
-                    <img src="../images/sandwich.jpg" alt="">
+                    <img class="picture" src="../images/sandwich.jpg" alt="Imagem sanduíche">
 
                     <div class="text-box1">
                         <p class="pink-color">Adicionado Ontem</p>
@@ -67,11 +69,11 @@
                         <div class="difficult">
                             <p class="pink-color">Fácil</p>
                             <div class="stars">
-                                <img src="../assets/estrela.svg" alt="">
-                                <img src="../assets/estrela.svg" alt="">
-                                <img src="../assets/estrela.svg" alt="">
-                                <img src="../assets/estrela.svg" alt="">
-                                <img src="../assets/estrela.svg" alt="">
+                                <img src="../assets/estrela.svg" alt="estrela">
+                                <img src="../assets/estrela.svg" alt="estrela">
+                                <img src="../assets/estrela.svg" alt="estrela">
+                                <img src="../assets/estrela.svg" alt="estrela">
+                                <img src="../assets/estrela.svg" alt="estrela">
                             </div>
                         </div>
                         <div class="slide">
@@ -126,14 +128,25 @@
             </section>
 
             <div class="right-background">
-
+                <div class="pink-circles">
+                    <img src="../assets/elemento_7.svg" draggable="false" alt="">
+                </div>
+                
+                <div class="shrimps">
+                    <img src="../assets/elemento_6.svg" draggable="false" alt="">
+                </div>
             </div>
         </div>
 
         <footer>
+
+            <div class="footer-bg1">
+                <img src="../assets/rodapé_elemento_1.svg" draggable="false" alt="">
+            </div>
+
             <div class="footer-box">
                 <div class="copy-box">
-                    <img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="">
+                    <img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="Logo Cookfy">
                     <p>©2020 Cookfy
                     </p>
                 </div>
@@ -155,6 +168,11 @@
                         <span class="icon pinterest-icon"></span></a>
                 </div>
             </div>
+
+            <div class="footer-bg2">
+                <img src="../assets/rodapé_elemento_2.svg" draggable="false" alt="">
+            </div>
+
         </footer>
 
         <div class="profile-modal">
@@ -167,9 +185,9 @@
                 <div class="avatar-name-box">
                     <div class="avatar-background">
                         {%if result.gender == 'female'%}
-                        <img src="../assets/Avatar_feminino.svg" alt="">
+                        <img src="../assets/Avatar_feminino.svg" alt="Avatar">
                         {%else%}
-                        <img src="../assets/Avatar_masculino.svg" alt="">
+                        <img src="../assets/Avatar_masculino.svg" alt="Avatar">
                         {%endif%}
                     </div>
 
@@ -180,12 +198,12 @@
                 </div>
 
                 <div class="email-box">
-                    <img src="../assets/email.svg" alt="">
+                    <img src="../assets/email.svg" alt="ícone email">
                     <p>{{ result.email }}</p>
                 </div>
 
                 <div class="phone-box">
-                    <img src="../assets/telefone.svg" alt="">
+                    <img src="../assets/telefone.svg" alt="ícone telefone">
                     <p>{{ result.phone }}</p>
                 </div>
 
@@ -214,17 +232,17 @@
                 </a>
 
                 <div class="profile-options">
-                    <img src="../assets/bug.svg" alt="">
+                    <img src="../assets/bug.svg" alt="bug ícone">
                     <a href="/">Reportar bug</a>
                 </div>
 
                 <div class="profile-options">
-                    <img src="../assets/senha.svg" alt="">
+                    <img src="../assets/senha.svg" alt="senha ícone">
                     <a href="/">Alterar senha</a>
                 </div>
 
                 <div class="profile-options">
-                    <img src="../assets/sair.svg" alt="">
+                    <img src="../assets/sair.svg" alt="sair ícone">
                     <a href="/">Sair</a>
                 </div>
 

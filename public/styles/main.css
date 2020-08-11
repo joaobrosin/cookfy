@@ -208,6 +208,29 @@ img.cookfy-logo {
     background-image: url("../assets/Pinterest_active.svg");
 }
 
+.footer-bg1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-bg1 img {
+    width: 180px;
+    margin-top: -40px;
+    z-index: -1;
+}
+
+.footer-bg2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-bg2 img {
+    width: 75px;
+    margin-top: -40px;
+}
+
 /* Profile MODAL */
 
 .profile-modal {
@@ -372,7 +395,7 @@ img.cookfy-logo {
 
 /* Responsivity settings */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
     /* Header */
 
@@ -410,6 +433,13 @@ img.cookfy-logo {
     .copy-box p {
         font-size: 8px;
         margin: 0;
+    }
+
+    /* footer background */
+
+    .footer-bg1 img{
+        width: 100px;
+        margin-top: 0;
     }
 
 }
@@ -478,6 +508,19 @@ img.cookfy-logo {
         align-self: flex-end;
     }
 
+    /* footer background */
+
+    .footer-bg1 img{
+        width: 70px;
+        margin-top: 35px;
+    }
+
+    .footer-bg2 img {
+        width: 50px;
+        margin-top: 5px;
+        margin-left: -20px;
+    }
+
 }
 
 @media (max-width: 360px) {
@@ -500,5 +543,20 @@ img.cookfy-logo {
     .call-to-action {
         width: 225px;
 
+    }
+}
+
+@media (max-width: 300px) {
+    .social-media-box a {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .title1 h1, .title2 h1 {
+        font-size: 28px;
+    }
+
+    .text-box1 h2 {
+        font-size: 20px;
     }
 }

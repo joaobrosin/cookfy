@@ -192,64 +192,119 @@
     width: 319px;
 }
 
+/* content backgrounds */
+
+.pink-circles {
+    display: flex;
+    justify-content: center;
+}
+
+.pink-circles img {
+    width: 100px;
+    margin-top: 120px;
+}
+
+.shrimps {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.shrimps img {
+    width: 127px;
+    margin-top: 700px;
+}
+
+.pink-balls {
+    display: flex;
+    justify-content: center;
+}
+
+.pink-balls img {
+    width: 125px;
+    margin-top: 620px;
+}
 
 
+/* Content Responsivity settings */
 
+@media (max-width: 1015px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsivity settings */
-
-@media (max-width: 1100px) {
-
-    /* introduction */
-
-    .introduction {
+    .content {
         grid-template-columns: 15% 70% 15%;
+    }
+    .pink-circles img {
+        width: 80px;
+    
+    }
+    .shrimps img {
+        width: 100px;
         
     }
-
-    .bg-image1 {
-        width: 127px;
-        height: 127px;
-
+    .pink-balls img {
+        width: 90px;
     }
+
 
 }
 
-@media (max-width: 930px) {
-    /* introduction */
-
-    .welcome-box h1 {
-        font-size: 30px;
-    }
-
-    .intro-image-box img {
-        width: 290px;
-    }
-
-}
-
-@media (max-width: 820px) {
+@media (max-width: 800px) {
     
+    .recipe1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
+    .recipe1 .text-box1 {
+        margin: 20px 0 0 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .recipe2 {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .recipe2 .kitchen-option-box {
+        margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .content {
+        grid-template-columns: 1fr;
+    } 
+
+    .left-background, .right-background {
+        display: none;
+    }
+
+    .middle-background {
+        margin: 20px 0;
+    }
+
+    .recipe2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .recipe1 .picture, .recipe2 .picture {
+        width: 250px;
+    }
+
+    .title1 h1, .title2 h1 {
+        max-width: 270px;
+    }
+
+}
+
+@media (max-width: 340px) {
+    .footer-bg1, .footer-bg2 {
+        display: none;
+    }
 }
