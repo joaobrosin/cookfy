@@ -2,6 +2,16 @@
     <h1> Cookfy <h1/>
 </div>
 
+<img src="./public/images/cookfy-layout.gif">
+
+---
+
+<div align="center">
+    <img  width="220px" src="./public/images/cookfy-mobile.gif">
+</div>
+
+
+
 # Table of Contents
 - [About](#-about)
 - [Technologies](#-technologies)

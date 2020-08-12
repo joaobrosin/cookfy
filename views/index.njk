@@ -1,330 +1,145 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.njk" %}}
 
-    <head>
-        {# SEO optimization #}
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Cookfy - Experimente suas receitas preferidas.">
-        <meta property="og:description" content="Experimente suas receitas preferidas, sem sair de casa. Receitas disponibilizadas pela própria comunidade.">
-        <meta property="og:image" content="https://cookfy.com/images/og-image.png">
-        <meta property="og:url" content="https://cookfy.com.br">
-        <meta name="description" content="Experimente suas receitas preferidas, sem sair de casa. Receitas disponibilizadas pela própria comunidade.">
-
-        {# general head settings #}
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cookfy - Experimente suas receitas preferidas.</title>
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/index.css">
-
-    </head>
-
-    <body>
-        <header>
-            <a href="/"><img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="Cookfy Logo"></a>
-            <div class="input-wrapper">
-                <form class="input-background" action="">
-                    <input type="text" placeholder="Pesquise alguma receita">
-                    <button class="search-button" type="submit"><img src="/assets/Lupa.svg" alt="Search Button"></button>
-                </form>
-            </div>
-
-            <div class="profile-box">
-                <p class="profile-name">{{result.name.first}}</p>
-                <div class="avatar-background">
-                    {%if result.gender == 'female'%}
-                        <img src="../assets/Avatar_feminino.svg" alt="Avatar">
-                    {%else%}
-                        <img src="../assets/Avatar_masculino.svg" alt="Avatar">
-                    {%endif%}
-                </div>
-            </div>
-        </header>
-
-        <section class="introduction">
-            <div class="intro-bg1-box">
-                <div class="intro-bg1">
-                    {# CSS background image #}
-                </div>
-            </div>
-            <div class="intro-main-box">
-                <div class="intro-text-box">
-                    {%if result.gender == 'female'%}
-                        <h1>Bem vinda de volta</h1>
-                    {%else%}
-                        <h1>Bem vindo de volta</h1>
-                    {%endif%}
-                    
-                    <h1 class="pink-color">{{ result.name.first }} {{ result.name.last }}</h1>
-                    <h3>Contribuição da comunidade:</h3>
-                    <h3>Ceviche de peixe branco</h3>
-                    <h3 class="pink-color">Por Michel Filipe</h3>
-                </div>
-                <div class="intro-image-box">
-                    <div class="intro-image-background">
-                        <img src="../assets/elemento_1.svg" draggable="false" alt="">
-                    </div>
-                        
-                    <div class="intro-image">
-                        <div class="intro-image-hover">
-                            <img src="../assets/seta_direita.svg" alt="">
-                           <p>Ver foto</p> 
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-                
-        <div class="content">
-
-            <div class="left-background">
-                <div class="pink-balls">
-                    {# CSS background image #}
-                </div>
-            </div>
+{% block introduction %}
+<section class="introduction">
+    <div class="intro-bg1-box">
+        <div class="intro-bg1">
+            {# CSS background image #}
+        </div>
+    </div>
+    <div class="intro-main-box">
+        <div class="intro-text-box">
+            {%if result.gender == 'female'%}
+                <h1>Bem vinda de volta</h1>
+            {%else%}
+                <h1>Bem vindo de volta</h1>
+            {%endif%}
             
-            <section>
-                <div class="title1">
-                    <h1>Experimente alguma das últimas receitas</h1>
-                </div>
-
-                <div class="recipe1">
-
-                    <img class="picture" src="../images/sandwich.jpg" alt="Imagem sanduíche">
-
-                    <div class="text-box1">
-                        <p class="pink-color">Adicionado Ontem</p>
-                        <h2>Sanduíche de tomate com salada de ovos</h2>
-                        <div class="difficult">
-                            <p class="pink-color">Fácil</p>
-                            <div class="stars">
-                                <img src="../assets/estrela.svg" alt="estrela">
-                                <img src="../assets/estrela.svg" alt="estrela">
-                                <img src="../assets/estrela_white.svg" alt="estrela">
-                                <img src="../assets/estrela_white.svg" alt="estrela">
-                                <img src="../assets/estrela_white.svg" alt="estrela">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="left-button">
-                                <div class="left-arrow-box">
-
-                                </div>
-                                
-                            </div>
-
-                            <div class="right-button">
-                                <div class="right-arrow-box">
-
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="middle-background">
-                    <div class="middle-background-image">
-                        {# CSS background image #}
-                    </div>
-                </div>
-
-                <div class="title2">
-                    <h1>Entre no mundo gastronômico</h1>
-                </div>
-
-                <div class="recipe2">
-                    <div class="kitchen-option-box">
-
-                        <div class="kitchen-option first-option">
-                            <div class="icon-box kitchen">
-                                {# css image bg #}
-                            </div>
-                            <h2>Cozinha</h2>
-                        </div>
-
-                        <div class="kitchen-option second-option selected">
-                            <div class="icon-box patisserie">
-                                {# css image bg #}
-                            </div>
-                            <h2>Patisserie</h2>
-                        </div>
-
-                        <div class="kitchen-option third-option">
-                            <div class="icon-box drinks">
-                                {# css image bg #}
-                            </div> 
-                            <h2>Drinks</h2>
-                        </div>
-
-                    </div>
-
-                    <img class="picture" src="../images/patisserie.jpg" alt="">
-
-                </div>
-
-
-            </section>
-
-            <div class="right-background">
-                <div class="pink-circles">
-                    {# css bg image #}
+            <h1 class="pink-color">{{ result.name.first }} {{ result.name.last }}</h1>
+            <h3>Contribuição da comunidade:</h3>
+            <h3>Ceviche de peixe branco</h3>
+            <h3 class="pink-color">Por Michel Filipe</h3>
+        </div>
+        <div class="intro-image-box">
+            <div class="intro-image-background">
+                <img src="../assets/elemento_1.svg" draggable="false" alt="">
+            </div>
+                
+            <div class="intro-image">
+                <div class="intro-image-hover">
+                    <img src="../assets/seta_direita.svg" alt="">
+                    <p>Ver foto</p> 
                 </div>
                 
-                <div class="shrimps">
-                    {# <img src="../assets/elemento_6.svg" draggable="false" alt=""> #}
-                </div>
             </div>
         </div>
+    </div>
+</section>
+{% endblock introduction %}
 
-        <footer>
+{% block content %}
+<div class="content">
 
-            <div class="footer-bg1">
-                <div class="footer-bg1-image">
-                    {# css bg image #}
-                </div>
-            </div>
+    <div class="left-background">
+        <div class="pink-balls">
+            {# CSS background image #}
+        </div>
+    </div>
+    
+    <section>
+        <div class="title1">
+            <h1>Experimente alguma das últimas receitas</h1>
+        </div>
 
-            <div class="footer-box">
-                <div class="copy-box">
-                    <img class="cookfy-logo" src="/assets/Logo_Cookfy.svg" alt="Logo Cookfy">
-                    <p>©2020 Cookfy
-                    </p>
-                </div>
+        <div class="recipe1">
 
-                <div class="social-media-box">
-                    <a href="https://facebook.com" target="_blank">
-                        <span class="icon facebook-icon"></span></a>
+            <img class="picture" src="../images/sandwich.jpg" alt="Imagem sanduíche">
 
-                    <a href="https://instagram.com" target="_blank">
-                        <span class="icon instagram-icon"></span></a>
-
-                    <a href="https://twitter.com" target="_blank">
-                        <span class="icon twitter-icon"></span></a>
-
-                    <a href="https://linkedin.com" target="_blank">
-                        <span class="icon linkedin-icon"></span></a>
-
-                    <a href="https://pinterest.com" target="_blank">
-                        <span class="icon pinterest-icon"></span></a>
-                </div>
-            </div>
-
-            <div class="footer-bg2">
-                <div class="footer-bg2-image"></div>
-                {# <img src="../assets/rodapé_elemento_2.svg" draggable="false" alt=""> #}
-            </div>
-
-        </footer>
-
-        <div class="profile-modal">
-            <div class="profile-modal-box">
-                <div class="close-button">
-                    <img src="../assets/fechar.svg " alt="Botão Fechar">
-                    <p>Fechar</p>
-                </div>
-
-                <div class="avatar-name-box">
-                    <div class="avatar-background">
-                        {%if result.gender == 'female'%}
-                        <img src="../assets/Avatar_feminino.svg" alt="Avatar">
-                        {%else%}
-                        <img src="../assets/Avatar_masculino.svg" alt="Avatar">
-                        {%endif%}
+            <div class="text-box1">
+                <p class="pink-color">Adicionado Ontem</p>
+                <h2>Sanduíche de tomate com salada de ovos</h2>
+                <div class="difficult">
+                    <p class="pink-color">Fácil</p>
+                    <div class="stars">
+                        <img src="../assets/estrela.svg" alt="estrela">
+                        <img src="../assets/estrela.svg" alt="estrela">
+                        <img src="../assets/estrela_white.svg" alt="estrela">
+                        <img src="../assets/estrela_white.svg" alt="estrela">
+                        <img src="../assets/estrela_white.svg" alt="estrela">
                     </div>
-
-                    <h3 class="full-name">
-                        {{ result.name.first }}
-                        {{ result.name.last }}
-                    </h3>
                 </div>
+                <div class="slide">
+                    <div class="left-button">
+                        <div class="left-arrow-box">
 
-                <div class="email-box">
-                    <img src="../assets/email.svg" alt="ícone email">
-                    <p>{{ result.email }}</p>
-                </div>
-
-                <div class="phone-box">
-                    <img src="../assets/telefone.svg" alt="ícone telefone">
-                    <p>{{ result.phone }}</p>
-                </div>
-
-                <div class="plan-box">
-                    <h2>Plano mensal</h2>
-                    <p class="end-day">
-                        {# JS random day #}
-                    </p>
-                    <p>
-                        dias restantes
-                    </p>
-                </div>
-
-                <div class="time-bar-box">
-                    <div class="time-bar-background">
-                        <div class="time-bar">
-                            {# JS random percentage bar #}
                         </div>
+                        
                     </div>
-                </div>
 
-                <a href="/">
-                    <div class="call-to-action">
-                        <h3>Assinar plano anual</h3>
-                    </div>
-                </a>
+                    <div class="right-button">
+                        <div class="right-arrow-box">
 
-                <div class="profile-options">
-                    <img src="../assets/bug.svg" alt="bug ícone">
-                    <a href="/">Reportar bug</a>
-                </div>
-
-                <div class="profile-options">
-                    <img src="../assets/senha.svg" alt="senha ícone">
-                    <a href="/">Alterar senha</a>
-                </div>
-
-                <div class="profile-options">
-                    <img src="../assets/sair.svg" alt="sair ícone">
-                    <a href="/">Sair</a>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="introduction-modal">
-            <div class="introduction-modal-box">
-                <div class="introduction-modal-image">
-                    <img src="../images/Header.jpg" alt="foto da receita">
-                </div>
-                <div class="introduction-modal-text">
-                    <div class="intro-close-button">
-                        <img src="../assets/fechar.svg" alt="">
-                    </div>
-                    <h3>Ceviche de peixe branco</h3>
-                    <h3 class="pink-color">Por Michel Filipe</h3>
-                    <p class="text-recipe">
-                        O ceviche é um prato de origem peruana feito com cubos de peixe que são cozidos em uma solução ácida, geralmente caldo de limão. Quando o peixe entra em contato com o limão, um processo químico é iniciado: a proteína do peixe se desnatura e a textura do peixe muda, deixando-o mais saboroso. O segredo para fazer um bom ceviche é a qualidade do ingrediente principal: o peixe tem que estar bem fresco. Esse prato peruano pode ser feito com salmão, camarões e alguns contam até com manga e abacate, e o tradicional é preparado com peixe branco. 
-                    </p>
-
-                    <div class="buttons-box">
-                      <div class="like-button">
-                        <img src="../assets/like.svg" alt="">
-                        <p>Curtir</p>
-                    </div>
-                    
-                    <div class="see-recipe-button">
-                        <img src="../assets/seta_direita.svg" alt="">
-                        <a href="https://google.com" target="_blank">Ver receita</a>
-                    </div>  
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
 
-        <script src="scripts/profile-modal.js"></script>
-        <script src="scripts/content.js"></script>
-        <script src="scripts/introduction-modal.js"></script>
-    </body>
+        <div class="middle-background">
+            <div class="middle-background-image">
+                {# CSS background image #}
+            </div>
+        </div>
 
-</html>
+        <div class="title2">
+            <h1>Entre no mundo gastronômico</h1>
+        </div>
+
+        <div class="recipe2">
+            <div class="kitchen-option-box">
+
+                <div class="kitchen-option first-option">
+                    <div class="icon-box kitchen">
+                        {# css image bg #}
+                    </div>
+                    <h2>Cozinha</h2>
+                </div>
+
+                <div class="kitchen-option second-option selected">
+                    <div class="icon-box patisserie">
+                        {# css image bg #}
+                    </div>
+                    <h2>Patisserie</h2>
+                </div>
+
+                <div class="kitchen-option third-option">
+                    <div class="icon-box drinks">
+                        {# css image bg #}
+                    </div> 
+                    <h2>Drinks</h2>
+                </div>
+
+            </div>
+
+            <img class="picture" src="../images/patisserie.jpg" alt="">
+
+        </div>
+
+
+    </section>
+
+    <div class="right-background">
+        <div class="pink-circles">
+            {# css bg image #}
+        </div>
+        
+        <div class="shrimps">
+            {# <img src="../assets/elemento_6.svg" draggable="false" alt=""> #}
+        </div>
+    </div>
+</div>
+{% endblock content %}     
+
+
+        
