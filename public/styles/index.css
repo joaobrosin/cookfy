@@ -4,19 +4,342 @@
     --color-unactive: #969090;
 }
 
-/* Introduction Default settings */
-
 .pink-color{
     color: var(--color-secondary);
 }
+
+/* Introduction Default settings */
 
 .introduction {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     width: 100%;
-    /* height: fit-content; */
     height: 300px;
     background-color: var(--color-background);
+}
+
+.intro-bg1-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-bg1 {
+    background-image: url("../assets/Elemento_2.svg");
+    background-position: center;
+    background-size: cover;
+    width: 135px;
+    height: 135px;
+
+}
+
+.intro-main-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.intro-text-box h1:nth-child(2){
+    margin-bottom: 30px;
+}
+
+.intro-text-box h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.intro-text-box h3.pink-color {
+    margin-bottom: 12px;
+}
+
+.intro-image-box {
+    position: relative;
+}
+
+.intro-image-background img {
+    width: 380px;
+}
+
+.intro-image {
+    background-image: url("../images/Header.jpg");
+    background-size: cover;
+    width: 285px;
+    height: 198px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.intro-image-hover {
+    background-color: white;
+    color: var(--color-secondary);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: 265px;
+    height: 50px;
+    opacity: 0;
+    transition: 400ms;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.intro-image:hover > .intro-image-hover {
+    opacity: 1;
+}
+
+.intro-image-hover img{
+    margin-right: 10px;
+    width: 12px;
+}
+
+
+
+/* introduction responsivity */
+
+@media (max-width: 1170px) {
+    .introduction {
+        grid-template-columns: 10% 80% 10%;
+    }
+
+    .intro-bg1 {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 890px) {
+    .introduction {
+        grid-template-columns: 10% 90%;
+    }
+
+    .intro-text-box h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 735px) {
+    .introduction {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-bg1-box {
+        display: none;
+    }
+
+    .intro-image-background img {
+        width: 320px;
+    }
+    
+    .intro-image {
+        width: 225px;
+        height: 156px;
+    }
+
+    .intro-image-hover {
+        width: 205px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 615px) {
+    .intro-main-box {
+        flex-direction: column;
+    }
+
+    .introduction {
+        height: 500px;
+    }
+
+    .intro-text-box h1, .intro-text-box h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 340px) {
+    .intro-image-background img {
+        width: 260px;
+    }
+    
+    .intro-image {
+        width: 165px;
+        height: 114px;
+    }
+}
+
+/* Introduction modal */
+
+.introduction-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms;
+}
+
+.introduction-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.introduction-modal-box {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    position: relative;
+    background-color: white;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    top: 10%;
+    box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.introduction-modal-image {
+    /* background-image: url("../images/Header.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; */
+    width: fit-content;
+    height: auto;
+    background-color: #dac0c0;
+}
+
+.introduction-modal-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduction-modal-text .intro-close-button {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.introduction-modal-text .intro-close-button:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 26px;
+}
+
+.introduction-modal-text .intro-close-button img {
+    width: 22px;
+}
+
+.introduction-modal-text {
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: 10%;
+   max-width: 80%;
+}
+
+.introduction-modal-text h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.introduction-modal-text p.text-recipe {
+    margin: 20px 0;
+    color: #555455;
+    font-weight: normal;
+}
+
+.buttons-box {
+    display: flex;
+    align-items: center;
+}
+
+.like-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 20px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.like-button:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.like-button img {
+    width: 10px;
+}
+
+.like-button p {
+    margin-left: 5px;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.see-recipe-button {
+    display: flex;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.see-recipe-button img {
+    width: 12px;
+}
+
+.see-recipe-button a {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 5px;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* introduction responsiity settings */
+
+@media (max-width: 965px) {
+    .introduction-modal-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .introduction-modal-text h3 {
+        font-size: 15px;
+    }
+
+    .introduction-modal-text p.text-recipe{
+        margin: 15px 0px;
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 815px) {
+    .introduction-modal-box {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: fit-content;
+    }
+
+    .introduction-modal-text h3:first-of-type {
+        margin-top: 15px;
+    }
+
+    .introduction-modal-text .buttons-box {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media (max-width: 660px) {
+    .introduction-modal-box {
+        width: 80%;  
+    }
 }
 
 
@@ -142,9 +465,20 @@
 }
 
 .middle-background {
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     margin: 85px 0;
+    /* background-color: red; */
+}
+
+.middle-background-image {
+    background-image: url("../assets/Elemento_5.svg");
+    background-size: cover;
+    background-position: center;
+    width: 190px;
+    height: 20px;
 }
 
 .title2 {
@@ -281,35 +615,45 @@
 
 /* content backgrounds */
 
-.pink-circles {
+.left-background {
     display: flex;
     justify-content: center;
-}
-
-.pink-circles img {
-    width: 100px;
-    margin-top: 120px;
-}
-
-.shrimps {
-    display: flex;
-    justify-content: center;
-    
-}
-
-.shrimps img {
-    width: 127px;
-    margin-top: 700px;
 }
 
 .pink-balls {
-    display: flex;
-    justify-content: center;
+    background-image: url("../assets/Elemento_4.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin-top: 620px;  
 }
 
-.pink-balls img {
-    width: 125px;
-    margin-top: 620px;
+.right-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pink-circles {
+    background-image: url("../assets/Elemento_7.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin-top: 130px;
+}
+
+.shrimps {
+    background-image: url("../assets/Elemento_6.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin-top: 660px; 
 }
 
 
@@ -320,16 +664,21 @@
     .content {
         grid-template-columns: 15% 70% 15%;
     }
-    .pink-circles img {
+
+    .pink-circles {
         width: 80px;
-    
+        height: 80px;
     }
-    .shrimps img {
-        width: 100px;
+
+    .shrimps {
+        width: 80px;
+        height: 80px;
         
     }
-    .pink-balls img {
-        width: 90px;
+    
+    .pink-balls {
+        width: 80px;
+        height: 80px;
     }
 
 
@@ -380,9 +729,15 @@
 }
 
 @media (max-width: 380px) {
-    .recipe1 .picture, .recipe2 .picture {
+
+    .recipe1 .picture {
         width: 250px;
         height: 130px;
+    }
+
+    .recipe2 .picture {
+        width: 250px;
+        height: 160px;
     }
 
     .title1 h1, .title2 h1 {

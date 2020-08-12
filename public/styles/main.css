@@ -212,12 +212,17 @@ img.cookfy-logo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    z-index: -1;
 }
 
-.footer-bg1 img {
+.footer-bg1-image {
+    background-image: url("../assets/Rodapé_elemento_1.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 180px;
-    margin-top: -40px;
-    z-index: -1;
+    height: 180px;
+    margin-top: -60px;
 }
 
 .footer-bg2 {
@@ -226,8 +231,13 @@ img.cookfy-logo {
     align-items: flex-start;
 }
 
-.footer-bg2 img {
-    width: 75px;
+.footer-bg2-image {
+    background-image: url("../assets/Rodapé_elemento_2.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
     margin-top: -40px;
 }
 
@@ -437,11 +447,13 @@ img.cookfy-logo {
 
     /* footer background */
 
-    .footer-bg1 img{
-        width: 100px;
-        margin-top: 0;
+    .footer-bg1-image{
+        width: 120px;
     }
 
+    .footer-bg2-image {
+        width: 70px;
+    }
 }
 
 @media (max-width: 715px) {
@@ -510,15 +522,8 @@ img.cookfy-logo {
 
     /* footer background */
 
-    .footer-bg1 img{
-        width: 70px;
-        margin-top: 35px;
-    }
-
-    .footer-bg2 img {
-        width: 50px;
-        margin-top: 5px;
-        margin-left: -20px;
+    .footer-bg1, .footer-bg2{
+        display: none;
     }
 
 }
@@ -558,5 +563,34 @@ img.cookfy-logo {
 
     .text-box1 h2 {
         font-size: 20px;
+    }
+}
+
+
+/* transition animations */
+
+.intro-main-box {
+    opacity: 0;
+    animation-name: up;
+    animation-duration: 700ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards; 
+}
+
+.content {
+    opacity: 0;
+    animation-name: up;
+    animation-duration: 700ms;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes up {
+    from {
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
     }
 }

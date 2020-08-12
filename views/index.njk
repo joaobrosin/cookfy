@@ -42,15 +42,45 @@
         </header>
 
         <section class="introduction">
-            <div></div>
-            <h1>Bem vindo</h1>
+            <div class="intro-bg1-box">
+                <div class="intro-bg1">
+                    {# CSS background image #}
+                </div>
+            </div>
+            <div class="intro-main-box">
+                <div class="intro-text-box">
+                    {%if result.gender == 'female'%}
+                        <h1>Bem vinda de volta</h1>
+                    {%else%}
+                        <h1>Bem vindo de volta</h1>
+                    {%endif%}
+                    
+                    <h1 class="pink-color">{{ result.name.first }} {{ result.name.last }}</h1>
+                    <h3>Contribuição da comunidade:</h3>
+                    <h3>Ceviche de peixe branco</h3>
+                    <h3 class="pink-color">Por Michel Filipe</h3>
+                </div>
+                <div class="intro-image-box">
+                    <div class="intro-image-background">
+                        <img src="../assets/elemento_1.svg" draggable="false" alt="">
+                    </div>
+                        
+                    <div class="intro-image">
+                        <div class="intro-image-hover">
+                            <img src="../assets/seta_direita.svg" alt="">
+                           <p>Ver foto</p> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </section>
                 
         <div class="content">
 
             <div class="left-background">
                 <div class="pink-balls">
-                    <img src="../assets/elemento_4.svg" draggable="false" alt="">
+                    {# CSS background image #}
                 </div>
             </div>
             
@@ -95,7 +125,9 @@
                 </div>
 
                 <div class="middle-background">
-                    <img src="../assets/elemento_5.svg" draggable="false" alt="">
+                    <div class="middle-background-image">
+                        {# CSS background image #}
+                    </div>
                 </div>
 
                 <div class="title2">
@@ -137,11 +169,11 @@
 
             <div class="right-background">
                 <div class="pink-circles">
-                    <img src="../assets/elemento_7.svg" draggable="false" alt="">
+                    {# css bg image #}
                 </div>
                 
                 <div class="shrimps">
-                    <img src="../assets/elemento_6.svg" draggable="false" alt="">
+                    {# <img src="../assets/elemento_6.svg" draggable="false" alt=""> #}
                 </div>
             </div>
         </div>
@@ -149,7 +181,9 @@
         <footer>
 
             <div class="footer-bg1">
-                <img src="../assets/rodapé_elemento_1.svg" draggable="false" alt="">
+                <div class="footer-bg1-image">
+                    {# css bg image #}
+                </div>
             </div>
 
             <div class="footer-box">
@@ -178,7 +212,8 @@
             </div>
 
             <div class="footer-bg2">
-                <img src="../assets/rodapé_elemento_2.svg" draggable="false" alt="">
+                <div class="footer-bg2-image"></div>
+                {# <img src="../assets/rodapé_elemento_2.svg" draggable="false" alt=""> #}
             </div>
 
         </footer>
@@ -257,8 +292,39 @@
             </div>
         </div>
 
+        <div class="introduction-modal">
+            <div class="introduction-modal-box">
+                <div class="introduction-modal-image">
+                    <img src="../images/Header.jpg" alt="foto da receita">
+                </div>
+                <div class="introduction-modal-text">
+                    <div class="intro-close-button">
+                        <img src="../assets/fechar.svg" alt="">
+                    </div>
+                    <h3>Ceviche de peixe branco</h3>
+                    <h3 class="pink-color">Por Michel Filipe</h3>
+                    <p class="text-recipe">
+                        O ceviche é um prato de origem peruana feito com cubos de peixe que são cozidos em uma solução ácida, geralmente caldo de limão. Quando o peixe entra em contato com o limão, um processo químico é iniciado: a proteína do peixe se desnatura e a textura do peixe muda, deixando-o mais saboroso. O segredo para fazer um bom ceviche é a qualidade do ingrediente principal: o peixe tem que estar bem fresco. Esse prato peruano pode ser feito com salmão, camarões e alguns contam até com manga e abacate, e o tradicional é preparado com peixe branco. 
+                    </p>
+
+                    <div class="buttons-box">
+                      <div class="like-button">
+                        <img src="../assets/like.svg" alt="">
+                        <p>Curtir</p>
+                    </div>
+                    
+                    <div class="see-recipe-button">
+                        <img src="../assets/seta_direita.svg" alt="">
+                        <a href="https://google.com" target="_blank">Ver receita</a>
+                    </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="scripts/profile-modal.js"></script>
         <script src="scripts/content.js"></script>
+        <script src="scripts/introduction-modal.js"></script>
     </body>
 
 </html>
