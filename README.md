@@ -2,6 +2,8 @@
     <h1> Cookfy <h1/>
 </div>
 
+---
+
 <img src="./public/images/cookfy-layout.gif">
 
 ---
@@ -10,7 +12,7 @@
     <img  width="220px" src="./public/images/cookfy-mobile.gif">
 </div>
 
-
+---
 
 # Table of Contents
 - [About](#-about)
@@ -20,7 +22,7 @@
 ---
 
 ## 📝 About
-The **Cookfy** project is a recipe platform developed during a challenge for a startup. 
+The **Cookfy** project is a recipe platform developed during a challenge for a startup. It uses an random user API to change the user page information for each page reload.
 
 ---
 ## 🚀 Technologies
