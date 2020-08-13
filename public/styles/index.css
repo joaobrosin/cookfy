@@ -89,6 +89,7 @@
 
 .intro-image:hover > .intro-image-hover {
     opacity: 1;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
 }
 
 .intro-image-hover img{
