@@ -1,8 +1,6 @@
 <div align="center">
-    <h1> Cookfy <h1/>
+    <h1> Cookfy <h1>
 </div>
-
----
 
 <img src="./public/images/cookfy-layout.gif">
 
@@ -17,7 +15,6 @@
 # Table of Contents
 - [About](#-about)
 - [Technologies](#-technologies)
-<!-- - [Installation](#-installation) -->
 
 ---
 
@@ -51,6 +48,5 @@ The project was developed with the following technologies:
     $ npm start
 ```
 ---
-
 
 Made with 💙 by ***João Brosin***.
